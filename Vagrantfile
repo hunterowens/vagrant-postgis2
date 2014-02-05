@@ -80,5 +80,7 @@ Vagrant::Config.run do |config|
     chef.roles_path = "roles"
     chef.add_role "vagrant-postgis2"
   end
+  ## Set env variables 
+  config.vm.provision :shell, :path => "export ECODISTRICTS_MODE=vagrant"
 
 end
